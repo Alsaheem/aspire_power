@@ -1,0 +1,10 @@
+{
+    "staging": {
+        "aws_region": "ap-southeast-2",
+        "django_settings": "aspire.settings",
+        "profile_name": "default",
+        "project_name": "aspire",
+        "runtime": "python3.8",
+        "s3_bucket": "aspire-vector-bucket"
+    }
+}

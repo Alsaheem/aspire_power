@@ -1,0 +1,19 @@
+version: "3"
+services:
+  app:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /aspire:/usr/app
+    ports:
+      - "3000:8000"
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /aspire:/usr/app
+    command: ["python", "manage.py", "test"]
